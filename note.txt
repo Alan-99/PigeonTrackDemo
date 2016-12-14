@@ -1,0 +1,5 @@
+-(void) doWork {
+    //不妨以IDFV作为entityName,开发者可以使用自己业务相关的唯一标识作为entityName
+    entityName = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    [_entityNameLabel setText:entityName];
+

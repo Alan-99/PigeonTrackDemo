@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InquiryViewController">
+            <connections>
+                <outlet property="chooseTarget" destination="xfD-gq-UL1" id="K5Q-10-LsM"/>
+                <outlet property="datePicker" destination="gIm-tj-SOq" id="uy9-UP-aum"/>
+                <outlet property="entityName2TextField" destination="AG3-Xw-Wt9" id="wpJ-ZC-NDs"/>
+                <outlet property="historyMapView" destination="MHb-Hc-2ad" id="CCZ-en-nRg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-Hc-2ad" customClass="BMKMapView">
+                    <frame key="frameInset" width="283" height="64"/>
+                </mapView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AG3-Xw-Wt9">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="as8-Ge-UQD"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG3-fI-RGd">
+                    <state key="normal" title="选择时间">
+                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="triggerDatePicker:" destination="-1" eventType="touchUpInside" id="csD-3S-s0Z"/>
+                    </connections>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gIm-tj-SOq">
+                    <date key="date" timeIntervalSinceReferenceDate="493283814.03683299">
+                        <!--2016-08-19 07:16:54 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="qLp-Qj-g6m"/>
+                    </connections>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择目标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfD-gq-UL1">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MHb-Hc-2ad" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1jN-Wm-PmJ"/>
+                <constraint firstAttribute="trailing" secondItem="AG3-Xw-Wt9" secondAttribute="trailing" constant="60" id="7Wc-gl-mHs"/>
+                <constraint firstAttribute="trailing" secondItem="MHb-Hc-2ad" secondAttribute="trailing" id="CV0-Xk-dwt"/>
+                <constraint firstItem="LG3-fI-RGd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="IsB-kT-Iw2"/>
+                <constraint firstItem="gIm-tj-SOq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="LPu-ue-tgJ"/>
+                <constraint firstItem="AG3-Xw-Wt9" firstAttribute="leading" secondItem="xfD-gq-UL1" secondAttribute="trailing" constant="23" id="R9o-89-uPc"/>
+                <constraint firstItem="AG3-Xw-Wt9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="81" id="bYD-3r-9Zd"/>
+                <constraint firstItem="xfD-gq-UL1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="87" id="bau-Fq-do7"/>
+                <constraint firstItem="gIm-tj-SOq" firstAttribute="top" secondItem="LG3-fI-RGd" secondAttribute="bottom" constant="40" id="iKD-w9-F07"/>
+                <constraint firstAttribute="trailing" secondItem="gIm-tj-SOq" secondAttribute="trailing" constant="76" id="jUB-5v-Yez"/>
+                <constraint firstItem="MHb-Hc-2ad" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oeM-87-fSB"/>
+                <constraint firstItem="LG3-fI-RGd" firstAttribute="top" secondItem="xfD-gq-UL1" secondAttribute="bottom" constant="20" id="pMa-tV-wEb"/>
+                <constraint firstAttribute="bottom" secondItem="MHb-Hc-2ad" secondAttribute="bottom" id="r5L-is-sIN"/>
+                <constraint firstItem="xfD-gq-UL1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="xkH-Pd-FnW"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="265.5" y="303.5"/>
+        </view>
+    </objects>
+</document>

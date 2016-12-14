@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunityViewController">
+            <connections>
+                <outlet property="comment" destination="VPM-aG-i3o" id="ysa-xb-eGa"/>
+                <outlet property="image" destination="x7E-7j-VBT" id="C60-D5-7os"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="评论。。。" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPM-aG-i3o">
+                    <frame key="frameInset" minX="50" minY="113" width="314" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Apy-I5-wRt"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-ij-nZC">
+                    <frame key="frameInset" minX="50" minY="73" width="30" height="30"/>
+                    <state key="normal" title="昵称"/>
+                    <connections>
+                        <action selector="nameSet:" destination="-1" eventType="touchUpInside" id="QQf-JH-VWd"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7E-7j-VBT">
+                    <frame key="frameInset" minX="50" minY="183" width="314" height="207"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="207" id="AZ9-Pa-PdW"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dus-ij-nZC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Aae-n4-dgR"/>
+                <constraint firstItem="x7E-7j-VBT" firstAttribute="leading" secondItem="VPM-aG-i3o" secondAttribute="leading" id="GeA-fg-zXv"/>
+                <constraint firstAttribute="trailing" secondItem="x7E-7j-VBT" secondAttribute="trailing" constant="50" id="Lqh-lG-0jn"/>
+                <constraint firstItem="Dus-ij-nZC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="73" id="Rod-af-o6G"/>
+                <constraint firstItem="x7E-7j-VBT" firstAttribute="top" secondItem="VPM-aG-i3o" secondAttribute="bottom" constant="40" id="TCk-Z8-kw0"/>
+                <constraint firstAttribute="trailing" secondItem="VPM-aG-i3o" secondAttribute="trailing" constant="50" id="awW-P5-01c"/>
+                <constraint firstItem="VPM-aG-i3o" firstAttribute="top" secondItem="Dus-ij-nZC" secondAttribute="bottom" constant="10" id="kpy-2n-t9E"/>
+                <constraint firstItem="VPM-aG-i3o" firstAttribute="leading" secondItem="Dus-ij-nZC" secondAttribute="leading" id="o1G-NK-h2P"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="346" y="304"/>
+        </view>
+    </objects>
+</document>
