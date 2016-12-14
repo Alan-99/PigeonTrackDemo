@@ -8,20 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ScanViewController.h"
-#import "MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDelegate.h"
-
-#import "TrackViewController.h"
-#import "MarkAnnotation.h"
-#import "ScanViewController.h"
-
-@class EntityNameDataSource;
-@class MLPAutoCompleteTextField;
 
 @protocol PDVCDelegate <NSObject>
 - (void)getPegionNameValue:(NSString*)value;
 @end
 
-@interface PegionDetailViewController : UIViewController <UITextFieldDelegate, ScanViewControllerDelegate, MLPAutoCompleteTextFieldDelegate>
+@interface PegionDetailViewController : UIViewController <UITextFieldDelegate, ScanViewControllerDelegate>
 
 // <ScanViewControllerDelegate, UITextFieldDelegate，MLPAutoCompleteTextField>
 
@@ -34,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *pegionFurcolorField;
 @property (weak, nonatomic) IBOutlet UIButton *qrButton;
 
-@property (strong) IBOutlet MLPAutoCompleteTextField *nameTextField;
+@property (strong, nonatomic)IBOutlet UITextField *nameTextField;
 
 - (IBAction)sweepCode:(UIButton *)sender;
 

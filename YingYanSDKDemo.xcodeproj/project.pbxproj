@@ -25,8 +25,6 @@
 		E722E7FC1D6560CE0061B1B4 /* InquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E722E7FA1D6560CE0061B1B4 /* InquiryViewController.m */; };
 		E722E7FD1D6560CE0061B1B4 /* InquiryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E722E7FB1D6560CE0061B1B4 /* InquiryViewController.xib */; };
 		E722E8011D6BDCE80061B1B4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E722E8001D6BDCE80061B1B4 /* Storyboard.storyboard */; };
-		E736B10E1DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E736B1081DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.m */; };
-		E736B10F1DFE9CA600C3ADA1 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = E736B10D1DFE9CA600C3ADA1 /* NSString+Levenshtein.m */; };
 		E74733221DB4B32600E586D3 /* PegionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74733201DB4B32600E586D3 /* PegionDetailViewController.m */; };
 		E74733231DB4B32600E586D3 /* PegionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */; };
 		E74733391DB84FA500E586D3 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74733381DB84FA500E586D3 /* ScanViewController.m */; };
@@ -69,9 +67,6 @@
 		E7C3FE671D8109A500CA875A /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */; };
 		E7C3FE681D8109A500CA875A /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */; };
 		E7C3FE6A1D8109BF00CA875A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C3FE691D8109BF00CA875A /* mapapi.bundle */; };
-		E7DE0B571DF656E00030FEB3 /* EntityNameDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DE0B561DF656E00030FEB3 /* EntityNameDataSource.m */; };
-		E7DE0B5E1DF661C70030FEB3 /* CustomAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DE0B5D1DF661C70030FEB3 /* CustomAutoCompleteObject.m */; };
-		E7DE0B641DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DE0B631DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,13 +107,6 @@
 		E722E7FA1D6560CE0061B1B4 /* InquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryViewController.m; sourceTree = "<group>"; };
 		E722E7FB1D6560CE0061B1B4 /* InquiryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InquiryViewController.xib; sourceTree = "<group>"; };
 		E722E8001D6BDCE80061B1B4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		E736B1071DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompleteTextField.h; path = ../FFDropDownMenu/MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
-		E736B1081DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLPAutoCompleteTextField.m; path = ../FFDropDownMenu/MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
-		E736B1091DFE9CA600C3ADA1 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompleteTextFieldDataSource.h; path = ../FFDropDownMenu/MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
-		E736B10A1DFE9CA600C3ADA1 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompleteTextFieldDelegate.h; path = ../FFDropDownMenu/MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
-		E736B10B1DFE9CA600C3ADA1 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompletionObject.h; path = ../FFDropDownMenu/MLPAutoCompletionObject.h; sourceTree = "<group>"; };
-		E736B10C1DFE9CA600C3ADA1 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Levenshtein.h"; path = "../FFDropDownMenu/NSString+Levenshtein.h"; sourceTree = "<group>"; };
-		E736B10D1DFE9CA600C3ADA1 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Levenshtein.m"; path = "../FFDropDownMenu/NSString+Levenshtein.m"; sourceTree = "<group>"; };
 		E747331F1DB4B32600E586D3 /* PegionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PegionDetailViewController.h; sourceTree = "<group>"; };
 		E74733201DB4B32600E586D3 /* PegionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PegionDetailViewController.m; sourceTree = "<group>"; };
 		E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PegionDetailViewController.xib; sourceTree = "<group>"; };
@@ -184,12 +172,6 @@
 		E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapAPI/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
 		E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapAPI/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		E7C3FE691D8109BF00CA875A /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
-		E7DE0B551DF656E00030FEB3 /* EntityNameDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityNameDataSource.h; sourceTree = "<group>"; };
-		E7DE0B561DF656E00030FEB3 /* EntityNameDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityNameDataSource.m; sourceTree = "<group>"; };
-		E7DE0B5C1DF661C70030FEB3 /* CustomAutoCompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutoCompleteObject.h; sourceTree = "<group>"; };
-		E7DE0B5D1DF661C70030FEB3 /* CustomAutoCompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutoCompleteObject.m; sourceTree = "<group>"; };
-		E7DE0B621DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutoCompleteCellTableViewCell.h; sourceTree = "<group>"; };
-		E7DE0B631DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutoCompleteCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,19 +259,6 @@
 				E747331F1DB4B32600E586D3 /* PegionDetailViewController.h */,
 				E74733201DB4B32600E586D3 /* PegionDetailViewController.m */,
 				E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */,
-				E736B1071DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.h */,
-				E736B1081DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.m */,
-				E736B1091DFE9CA600C3ADA1 /* MLPAutoCompleteTextFieldDataSource.h */,
-				E736B10A1DFE9CA600C3ADA1 /* MLPAutoCompleteTextFieldDelegate.h */,
-				E736B10B1DFE9CA600C3ADA1 /* MLPAutoCompletionObject.h */,
-				E736B10C1DFE9CA600C3ADA1 /* NSString+Levenshtein.h */,
-				E736B10D1DFE9CA600C3ADA1 /* NSString+Levenshtein.m */,
-				E7DE0B551DF656E00030FEB3 /* EntityNameDataSource.h */,
-				E7DE0B561DF656E00030FEB3 /* EntityNameDataSource.m */,
-				E7DE0B5C1DF661C70030FEB3 /* CustomAutoCompleteObject.h */,
-				E7DE0B5D1DF661C70030FEB3 /* CustomAutoCompleteObject.m */,
-				E7DE0B621DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.h */,
-				E7DE0B631DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.m */,
 				E74733371DB84FA500E586D3 /* ScanViewController.h */,
 				E74733381DB84FA500E586D3 /* ScanViewController.m */,
 				E7B46D0A1D867D1300707A8F /* MarkAnnotation.h */,
@@ -510,7 +479,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E736B10E1DFE9CA600C3ADA1 /* MLPAutoCompleteTextField.m in Sources */,
 				E7B6026D1DF01F1400EFE9F4 /* PushClassViewController.m in Sources */,
 				E7B6022A1DEDB33E00EFE9F4 /* MineTableViewController.m in Sources */,
 				E7B6026A1DF01E8700EFE9F4 /* CellGroupModel.m in Sources */,
@@ -519,15 +487,12 @@
 				E74733221DB4B32600E586D3 /* PegionDetailViewController.m in Sources */,
 				E1F21ECA1BF447E40081F86D /* AppDelegate.mm in Sources */,
 				E7B46D0C1D867D1300707A8F /* MarkAnnotation.m in Sources */,
-				E7DE0B641DF69BD10030FEB3 /* CustomAutoCompleteCellTableViewCell.m in Sources */,
 				E77C20251D47535600B05823 /* TrackViewController.m in Sources */,
 				E7B68AC81DAC8E9700844A62 /* FFDropDownMenuBasedCell.m in Sources */,
-				E7DE0B5E1DF661C70030FEB3 /* CustomAutoCompleteObject.m in Sources */,
 				E7B6028A1DF11ED600EFE9F4 /* MySettingViewController.m in Sources */,
 				E7B602851DF11EBD00EFE9F4 /* MyDeviceViewController.m in Sources */,
 				E7B68ACC1DAC8E9700844A62 /* FFDropDownMenuTriangleView.m in Sources */,
 				E7B68ACD1DAC8E9700844A62 /* FFDropDownMenuView.m in Sources */,
-				E7DE0B571DF656E00030FEB3 /* EntityNameDataSource.m in Sources */,
 				E1F21EC71BF447E40081F86D /* main.m in Sources */,
 				E7B602761DF11E4C00EFE9F4 /* FeedYearsViewController.m in Sources */,
 				E7B602801DF11EA700EFE9F4 /* MyPegionViewController.m in Sources */,
@@ -535,7 +500,6 @@
 				E7B602641DF01DBE00EFE9F4 /* CellModel.m in Sources */,
 				E77AB8731D6FB7CA007B616F /* CommunityViewController.m in Sources */,
 				E7B602711DF1129F00EFE9F4 /* NickNameViewController.m in Sources */,
-				E736B10F1DFE9CA600C3ADA1 /* NSString+Levenshtein.m in Sources */,
 				E1F21F001BF45BBD0081F86D /* JSONKit.m in Sources */,
 				E7B68ACA1DAC8E9700844A62 /* FFDropDownMenuCell.m in Sources */,
 				E722E7FC1D6560CE0061B1B4 /* InquiryViewController.m in Sources */,
