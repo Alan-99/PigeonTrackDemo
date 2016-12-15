@@ -67,6 +67,7 @@
 		E7C3FE671D8109A500CA875A /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */; };
 		E7C3FE681D8109A500CA875A /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */; };
 		E7C3FE6A1D8109BF00CA875A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C3FE691D8109BF00CA875A /* mapapi.bundle */; };
+		E7F39F301E00DB91001F8A36 /* AutoCompletionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -172,6 +173,8 @@
 		E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapAPI/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
 		E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapAPI/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		E7C3FE691D8109BF00CA875A /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		E7F39F2E1E00DB91001F8A36 /* AutoCompletionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompletionTableView.h; sourceTree = "<group>"; };
+		E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompletionTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +262,8 @@
 				E747331F1DB4B32600E586D3 /* PegionDetailViewController.h */,
 				E74733201DB4B32600E586D3 /* PegionDetailViewController.m */,
 				E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */,
+				E7F39F2E1E00DB91001F8A36 /* AutoCompletionTableView.h */,
+				E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */,
 				E74733371DB84FA500E586D3 /* ScanViewController.h */,
 				E74733381DB84FA500E586D3 /* ScanViewController.m */,
 				E7B46D0A1D867D1300707A8F /* MarkAnnotation.h */,
@@ -481,6 +486,7 @@
 			files = (
 				E7B6026D1DF01F1400EFE9F4 /* PushClassViewController.m in Sources */,
 				E7B6022A1DEDB33E00EFE9F4 /* MineTableViewController.m in Sources */,
+				E7F39F301E00DB91001F8A36 /* AutoCompletionTableView.m in Sources */,
 				E7B6026A1DF01E8700EFE9F4 /* CellGroupModel.m in Sources */,
 				E74733391DB84FA500E586D3 /* ScanViewController.m in Sources */,
 				E7B602671DF01E3500EFE9F4 /* ArrowCellModel.m in Sources */,
