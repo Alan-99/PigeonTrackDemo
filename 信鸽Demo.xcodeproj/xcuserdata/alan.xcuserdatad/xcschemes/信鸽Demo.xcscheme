@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
                BuildableName = "YingYanSDKDemo.app"
-               BlueprintName = "YingYanSDKDemo"
-               ReferencedContainer = "container:YingYanSDKDemo.xcodeproj">
+               BlueprintName = "&#x4fe1;&#x9e3d;Demo"
+               ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
             BuildableName = "YingYanSDKDemo.app"
-            BlueprintName = "YingYanSDKDemo"
-            ReferencedContainer = "container:YingYanSDKDemo.xcodeproj">
+            BlueprintName = "&#x4fe1;&#x9e3d;Demo"
+            ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
             BuildableName = "YingYanSDKDemo.app"
-            BlueprintName = "YingYanSDKDemo"
-            ReferencedContainer = "container:YingYanSDKDemo.xcodeproj">
+            BlueprintName = "&#x4fe1;&#x9e3d;Demo"
+            ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
             BuildableName = "YingYanSDKDemo.app"
-            BlueprintName = "YingYanSDKDemo"
-            ReferencedContainer = "container:YingYanSDKDemo.xcodeproj">
+            BlueprintName = "&#x4fe1;&#x9e3d;Demo"
+            ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

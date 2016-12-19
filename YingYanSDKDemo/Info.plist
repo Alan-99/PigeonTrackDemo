@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>鹰眼DEMO</string>
+	<string>信鸽demo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,9 +30,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>鹰眼DEMO需要使用摄像头</string>
+	<string>信鸽DEMO需要使用摄像头</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>鹰眼DEMO需要后台定位</string>
+	<string>信鸽DEMO需要后台定位</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

@@ -86,7 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E1F21EC21BF447E40081F86D /* YingYanSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YingYanSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F21EC21BF447E40081F86D /* 信鸽Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "信鸽Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F21EC61BF447E40081F86D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1F21EC81BF447E40081F86D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1F21EC91BF447E40081F86D /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 		E1F21EC31BF447E40081F86D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1F21EC21BF447E40081F86D /* YingYanSDKDemo.app */,
+				E1F21EC21BF447E40081F86D /* 信鸽Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -408,9 +408,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1F21EC11BF447E40081F86D /* YingYanSDKDemo */ = {
+		E1F21EC11BF447E40081F86D /* 信鸽Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1F21EDC1BF447E40081F86D /* Build configuration list for PBXNativeTarget "YingYanSDKDemo" */;
+			buildConfigurationList = E1F21EDC1BF447E40081F86D /* Build configuration list for PBXNativeTarget "信鸽Demo" */;
 			buildPhases = (
 				E1F21EBE1BF447E40081F86D /* Sources */,
 				E1F21EBF1BF447E40081F86D /* Frameworks */,
@@ -421,9 +421,9 @@
 			);
 			dependencies = (
 			);
-			name = YingYanSDKDemo;
+			name = "信鸽Demo";
 			productName = YingYanSDKDemo;
-			productReference = E1F21EC21BF447E40081F86D /* YingYanSDKDemo.app */;
+			productReference = E1F21EC21BF447E40081F86D /* 信鸽Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -441,7 +441,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E1F21EBD1BF447E40081F86D /* Build configuration list for PBXProject "YingYanSDKDemo" */;
+			buildConfigurationList = E1F21EBD1BF447E40081F86D /* Build configuration list for PBXProject "信鸽Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -454,7 +454,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1F21EC11BF447E40081F86D /* YingYanSDKDemo */,
+				E1F21EC11BF447E40081F86D /* 信鸽Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -660,7 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = sibet.Alan.TraceDemoVer0;
-				PRODUCT_NAME = YingYanSDKDemo;
+				PRODUCT_NAME = "信鸽Demo";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -687,7 +687,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = sibet.Alan.TraceDemoVer0;
-				PRODUCT_NAME = YingYanSDKDemo;
+				PRODUCT_NAME = "信鸽Demo";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -696,7 +696,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E1F21EBD1BF447E40081F86D /* Build configuration list for PBXProject "YingYanSDKDemo" */ = {
+		E1F21EBD1BF447E40081F86D /* Build configuration list for PBXProject "信鸽Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1F21EDA1BF447E40081F86D /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1F21EDC1BF447E40081F86D /* Build configuration list for PBXNativeTarget "YingYanSDKDemo" */ = {
+		E1F21EDC1BF447E40081F86D /* Build configuration list for PBXNativeTarget "信鸽Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1F21EDD1BF447E40081F86D /* Debug */,
