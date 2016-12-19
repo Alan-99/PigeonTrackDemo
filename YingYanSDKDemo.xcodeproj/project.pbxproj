@@ -67,6 +67,7 @@
 		E7C3FE671D8109A500CA875A /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */; };
 		E7C3FE681D8109A500CA875A /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */; };
 		E7C3FE6A1D8109BF00CA875A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C3FE691D8109BF00CA875A /* mapapi.bundle */; };
+		E7EEDCAA1E07B17D00703A89 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EEDCA91E07B17D00703A89 /* Item.m */; };
 		E7F39F301E00DB91001F8A36 /* AutoCompletionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +174,8 @@
 		E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapAPI/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
 		E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapAPI/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		E7C3FE691D8109BF00CA875A /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		E7EEDCA81E07B17D00703A89 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		E7EEDCA91E07B17D00703A89 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		E7F39F2E1E00DB91001F8A36 /* AutoCompletionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompletionTableView.h; sourceTree = "<group>"; };
 		E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompletionTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +265,8 @@
 				E747331F1DB4B32600E586D3 /* PegionDetailViewController.h */,
 				E74733201DB4B32600E586D3 /* PegionDetailViewController.m */,
 				E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */,
+				E7EEDCA81E07B17D00703A89 /* Item.h */,
+				E7EEDCA91E07B17D00703A89 /* Item.m */,
 				E7F39F2E1E00DB91001F8A36 /* AutoCompletionTableView.h */,
 				E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */,
 				E74733371DB84FA500E586D3 /* ScanViewController.h */,
@@ -495,6 +500,7 @@
 				E7B46D0C1D867D1300707A8F /* MarkAnnotation.m in Sources */,
 				E77C20251D47535600B05823 /* TrackViewController.m in Sources */,
 				E7B68AC81DAC8E9700844A62 /* FFDropDownMenuBasedCell.m in Sources */,
+				E7EEDCAA1E07B17D00703A89 /* Item.m in Sources */,
 				E7B6028A1DF11ED600EFE9F4 /* MySettingViewController.m in Sources */,
 				E7B602851DF11EBD00EFE9F4 /* MyDeviceViewController.m in Sources */,
 				E7B68ACC1DAC8E9700844A62 /* FFDropDownMenuTriangleView.m in Sources */,
