@@ -30,20 +30,20 @@ static NSString *entityName;
         UIImage *i = [UIImage imageNamed:@"inquiry.png"];
         tbi.image = i;
         
-        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addObject)];
-        self.navigationItem.leftBarButtonItem = bbi;
+        self.navigationItem.title = @"查询";
+        
+//        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addObject)];
+//        self.navigationItem.leftBarButtonItem = bbi;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"开始查询" style:UIBarButtonItemStylePlain target:self action:@selector(onClickQueryHistoryTrackButton:)];
     }
     return self;
 }
 
-- (void)addObject
-{
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _entityName2TextField.placeholder = @"请输入待查询信鸽名";
+    _entityName2TextField.returnKeyType = UIReturnKeyGo;
     // Do any additional setup after loading the view from its nib.
     global_queue_view2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 }

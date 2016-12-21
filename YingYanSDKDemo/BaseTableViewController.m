@@ -10,6 +10,7 @@
 #import "CellGroupModel.h"
 #import "ArrowCellModel.h"
 #import "PushClassViewController.h"
+#import "NickNameViewController.h"
 
 @interface BaseTableViewController ()
 
@@ -72,11 +73,20 @@
         tableViewCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"tableViewCell"];
     }
     
+    
     CellGroupModel *cellGroupModel = self.cellGroups[indexPath.section];
     ArrowCellModel *arrowCellModel = cellGroupModel.section[indexPath.row];
     tableViewCell.textLabel.textAlignment = NSTextAlignmentLeft;
     tableViewCell.textLabel.text = arrowCellModel.title;
-    
+    tableViewCell.detailTextLabel.text = arrowCellModel.detail;
+
+//    if (indexPath.section == 0) {
+//        
+//        NickNameViewController *nnvc = [[NickNameViewController alloc]init];
+//        nnvc.returnTextBlock = ^(NSString *text){
+//            tableViewCell.detailTextLabel.text = text;
+//        };
+//    }
 //    // tableViewCell与对应的pushClass之间的传值问题
 //    PushClassViewController *pcvc = [[PushClassViewController alloc]init];
 //    arrowCellModel.pushClass = pcvc;

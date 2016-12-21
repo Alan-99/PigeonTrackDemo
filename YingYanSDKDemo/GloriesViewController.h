@@ -9,5 +9,6 @@
 #import "PushClassViewController.h"
 
 @interface GloriesViewController : PushClassViewController
+@property (weak, nonatomic) IBOutlet UITextField *gloriesTextField;
 
 @end

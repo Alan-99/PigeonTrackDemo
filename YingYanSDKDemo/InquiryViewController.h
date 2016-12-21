@@ -18,7 +18,6 @@
 
 @property (strong, nonatomic) IBOutlet BMKMapView *historyMapView;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (weak, nonatomic) IBOutlet UILabel *chooseTarget;
 @property (weak, nonatomic) IBOutlet UITextField *entityName2TextField;
 
 - (IBAction)datePickerValueChanged:(UIDatePicker *)sender;

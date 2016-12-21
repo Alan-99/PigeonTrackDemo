@@ -8,24 +8,26 @@
 
 #import "ArrowCellModel.h"
 #import "PushClassViewController.h"
+#import "NickNameViewController.h"
 
 @implementation ArrowCellModel
 
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        self.detail = self.pushClass->detail;
-//    }
-//    return self;
-//}
-
-+ (instancetype)arrowCellModelWithTitle:(NSString *)title pushClass:(Class)pushClass
++ (instancetype)arrowCellModelWithTitle:(NSString *)title
+                              pushClass:(Class)pushClass
 {
     //    ArrowCellModel *arrowCellModel = [ArrowCellModel cellModelWithTitle:title detail:detail];
     ArrowCellModel *arrowCellModel = [[ArrowCellModel alloc]init];
     arrowCellModel.title = title;
     arrowCellModel.pushClass = pushClass;
+    
+//    if ((pushClass = [NickNameViewController class])) {
+//        NickNameViewController *nnvc = [[NickNameViewController alloc]init];
+//        nnvc.returnTextBlock = ^(NSString *text){
+//            arrowCellModel.detail = text;
+//        };
+//    };
+
+    
     
     return arrowCellModel;
 }

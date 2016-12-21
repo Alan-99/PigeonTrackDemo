@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
-               BuildableName = "YingYanSDKDemo.app"
+               BuildableName = "&#x4fe1;&#x9e3d;Demo.app"
                BlueprintName = "&#x4fe1;&#x9e3d;Demo"
                ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
-            BuildableName = "YingYanSDKDemo.app"
+            BuildableName = "&#x4fe1;&#x9e3d;Demo.app"
             BlueprintName = "&#x4fe1;&#x9e3d;Demo"
             ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
-            BuildableName = "YingYanSDKDemo.app"
+            BuildableName = "&#x4fe1;&#x9e3d;Demo.app"
             BlueprintName = "&#x4fe1;&#x9e3d;Demo"
             ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1F21EC11BF447E40081F86D"
-            BuildableName = "YingYanSDKDemo.app"
+            BuildableName = "&#x4fe1;&#x9e3d;Demo.app"
             BlueprintName = "&#x4fe1;&#x9e3d;Demo"
             ReferencedContainer = "container:&#x4fe1;&#x9e3d;Demo.xcodeproj">
          </BuildableReference>

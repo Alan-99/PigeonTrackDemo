@@ -8,7 +8,7 @@
 
 #import "MyPegionViewController.h"
 
-@interface MyPegionViewController ()
+@interface MyPegionViewController () <UITextFieldDelegate>
 
 @end
 
@@ -23,6 +23,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 /*
 #pragma mark - Navigation

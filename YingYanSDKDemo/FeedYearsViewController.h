@@ -10,4 +10,6 @@
 
 @interface FeedYearsViewController : PushClassViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *feedYears;
+
 @end

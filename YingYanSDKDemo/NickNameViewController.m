@@ -8,7 +8,7 @@
 
 #import "NickNameViewController.h"
 
-@interface NickNameViewController ()
+@interface NickNameViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -21,15 +21,20 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    // 取消当前的第一响应对象
-//    [self.view endEditing:YES];
-//    self.detail = self.nickName.text;
+    if (self.returnTextBlock != nil) {
+        self.returnTextBlock(self.nickName.text);
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    self.nickName.text = self.detail;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

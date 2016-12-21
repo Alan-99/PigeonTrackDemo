@@ -8,8 +8,11 @@
 
 #import "PushClassViewController.h"
 
+typedef void (^ReturnTextBlock)(NSString *text);
+
 @interface NickNameViewController : PushClassViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *nickName;
+@property (nonatomic, copy) ReturnTextBlock returnTextBlock;
 
 @end
