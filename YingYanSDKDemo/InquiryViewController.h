@@ -21,7 +21,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *entityName2TextField;
 
 - (IBAction)datePickerValueChanged:(UIDatePicker *)sender;
-- (IBAction)triggerDatePicker:(UIButton *)sender;
+
 - (void)onClickQueryHistoryTrackButton:(UIButton *)sender;
 
 @end
+
+

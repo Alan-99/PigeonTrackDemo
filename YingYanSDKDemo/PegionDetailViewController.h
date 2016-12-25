@@ -17,7 +17,7 @@
 - (void)getPegionNameValue:(NSString*)value;
 @end
 
-@interface PegionDetailViewController : UIViewController <UITextFieldDelegate, ScanViewControllerDelegate, AutoCompletionTableViewDelegate>
+@interface PegionDetailViewController : UIViewController <UITextFieldDelegate, AutoCompletionTableViewDelegate>
 
 // <ScanViewControllerDelegate, UITextFieldDelegate，MLPAutoCompleteTextField>
 

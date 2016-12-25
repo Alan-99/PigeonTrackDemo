@@ -141,6 +141,25 @@
 - (NSArray*) autoCompletion:(AutoCompletionTableView*) completer suggestionsFor:(NSString*) string{
     // with the prodided string, build a new array with suggestions - from DB, from a service, etc.
     return [NSArray arrayWithObjects:
+            @"201611040",
+            @"201611042",
+            @"201612040",
+            @"201609134",
+            @"201609135",
+            @"201609136",
+            @"201609137",
+            @"201609138",
+            @"201609139",
+            @"201609140",
+            @"201609141",
+            @"201609142",
+            @"201609143",
+            @"201609144",
+            @"201609145",
+            @"201609146",
+            @"201609147",
+            @"201609148",
+            @"201609149",
             @"pegion0705",
             @"pegion0720",
             @"haha0910",
@@ -173,23 +192,6 @@
             @"haha1007",
             @"haha1008",
             @"haha1009",
-            @"201609134",
-            @"201609135",
-            @"201609136",
-            @"201609137",
-            @"201609138",
-            @"201609139",
-            @"201609140",
-            @"201609141",
-            @"201609142",
-            @"201609143",
-            @"201609144",
-            @"201609145",
-            @"201609146",
-            @"201609147",
-            @"201609148",
-            @"201609149",
-            
             //性别推荐
             @"male",
             @"female",
@@ -283,15 +285,12 @@
 
 - (IBAction)sweepCode:(UIButton *)sender {
     ScanViewController *svc = [[ScanViewController alloc]init];
-    svc.delegate2 = self;
-    
+    svc.returnQRCode = ^(NSString *text){
+        self.pegionNumberField.text = text;
+    };
     [self.navigationController pushViewController:svc animated:NO];
-
 }
 
-- (void)getQRCodeValue:(NSString *)value
-{
-    self.pegionNumberField.text = value;
-}
+
 
 @end
