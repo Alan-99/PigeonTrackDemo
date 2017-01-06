@@ -141,25 +141,6 @@
 - (NSArray*) autoCompletion:(AutoCompletionTableView*) completer suggestionsFor:(NSString*) string{
     // with the prodided string, build a new array with suggestions - from DB, from a service, etc.
     return [NSArray arrayWithObjects:
-            @"201611040",
-            @"201611042",
-            @"201612040",
-            @"201609134",
-            @"201609135",
-            @"201609136",
-            @"201609137",
-            @"201609138",
-            @"201609139",
-            @"201609140",
-            @"201609141",
-            @"201609142",
-            @"201609143",
-            @"201609144",
-            @"201609145",
-            @"201609146",
-            @"201609147",
-            @"201609148",
-            @"201609149",
             @"pegion0705",
             @"pegion0720",
             @"haha0910",
@@ -192,6 +173,23 @@
             @"haha1007",
             @"haha1008",
             @"haha1009",
+            @"201609134",
+            @"201609135",
+            @"201609136",
+            @"201609137",
+            @"201609138",
+            @"201609139",
+            @"201609140",
+            @"201609141",
+            @"201609142",
+            @"201609143",
+            @"201609144",
+            @"201609145",
+            @"201609146",
+            @"201609147",
+            @"201609148",
+            @"201609149",
+            
             //性别推荐
             @"male",
             @"female",
@@ -214,16 +212,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self inputTextField];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    
+    [self.view addGestureRecognizer:tap];
     
 //    [self.nameTextField addTarget:self.autoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pegionNameField addTarget:self.pegionNameAutoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pegionSexField addTarget:self.pegionSexAutoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pegionFurcolorField addTarget:self.pegionFurcolorAutoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
-
-
-    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)closeKeyboard
+{
+    [self.view endEditing:YES];
 }
 
 - (void)setItem:(Item *)item
@@ -285,12 +289,15 @@
 
 - (IBAction)sweepCode:(UIButton *)sender {
     ScanViewController *svc = [[ScanViewController alloc]init];
-    svc.returnQRCode = ^(NSString *text){
-        self.pegionNumberField.text = text;
-    };
+    svc.delegate2 = self;
+    
     [self.navigationController pushViewController:svc animated:NO];
+
 }
 
-
+- (void)getQRCodeValue:(NSString *)value
+{
+    self.pegionNumberField.text = value;
+}
 
 @end

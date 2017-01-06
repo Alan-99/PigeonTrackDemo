@@ -22,14 +22,14 @@
 		E1F21EFB1BF45B410081F86D /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F21EFA1BF45B410081F86D /* libstdc++.6.0.9.tbd */; };
 		E1F21F001BF45BBD0081F86D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F21EFF1BF45BBD0081F86D /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1F21F0B1BF465E40081F86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F21F091BF465E40081F86D /* Main.storyboard */; };
-		E71EF5BB1E0A5B0E001C1495 /* BaiduTraceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71EF5BA1E0A5B0E001C1495 /* BaiduTraceSDK.framework */; };
-		E71EF5BC1E0A5B0E001C1495 /* BaiduTraceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E71EF5BA1E0A5B0E001C1495 /* BaiduTraceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E722E7FC1D6560CE0061B1B4 /* InquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E722E7FA1D6560CE0061B1B4 /* InquiryViewController.m */; };
 		E722E7FD1D6560CE0061B1B4 /* InquiryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E722E7FB1D6560CE0061B1B4 /* InquiryViewController.xib */; };
 		E722E8011D6BDCE80061B1B4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E722E8001D6BDCE80061B1B4 /* Storyboard.storyboard */; };
 		E74733221DB4B32600E586D3 /* PegionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74733201DB4B32600E586D3 /* PegionDetailViewController.m */; };
 		E74733231DB4B32600E586D3 /* PegionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */; };
 		E74733391DB84FA500E586D3 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74733381DB84FA500E586D3 /* ScanViewController.m */; };
+		E7473F111DC1ED1F00057EC4 /* BaiduTraceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7473F101DC1ED1F00057EC4 /* BaiduTraceSDK.framework */; };
+		E7473F121DC1ED1F00057EC4 /* BaiduTraceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7473F101DC1ED1F00057EC4 /* BaiduTraceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E77AB8731D6FB7CA007B616F /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E77AB8711D6FB7CA007B616F /* CommunityViewController.m */; };
 		E77AB8741D6FB7CA007B616F /* CommunityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77AB8721D6FB7CA007B616F /* CommunityViewController.xib */; };
 		E77C20251D47535600B05823 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E77C20231D47535600B05823 /* TrackViewController.m */; };
@@ -72,13 +72,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E71EF5BD1E0A5B0E001C1495 /* Embed Frameworks */ = {
+		E7473F131DC1ED2000057EC4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E71EF5BC1E0A5B0E001C1495 /* BaiduTraceSDK.framework in Embed Frameworks */,
+				E7473F121DC1ED1F00057EC4 /* BaiduTraceSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +105,6 @@
 		E1F21EFE1BF45BB80081F86D /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		E1F21EFF1BF45BBD0081F86D /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		E1F21F0A1BF465E40081F86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E71EF5BA1E0A5B0E001C1495 /* BaiduTraceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduTraceSDK.framework; sourceTree = "<group>"; };
 		E722E7F91D6560CE0061B1B4 /* InquiryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InquiryViewController.h; sourceTree = "<group>"; };
 		E722E7FA1D6560CE0061B1B4 /* InquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryViewController.m; sourceTree = "<group>"; };
 		E722E7FB1D6560CE0061B1B4 /* InquiryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InquiryViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PegionDetailViewController.xib; sourceTree = "<group>"; };
 		E74733371DB84FA500E586D3 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		E74733381DB84FA500E586D3 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		E7473F101DC1ED1F00057EC4 /* BaiduTraceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduTraceSDK.framework; sourceTree = "<group>"; };
 		E77AB8701D6FB7CA007B616F /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
 		E77AB8711D6FB7CA007B616F /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		E77AB8721D6FB7CA007B616F /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityViewController.xib; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 				E1F21EEF1BF45B0C0081F86D /* OpenGLES.framework in Frameworks */,
 				E1F21EED1BF45B040081F86D /* QuartzCore.framework in Frameworks */,
 				E1F21EEB1BF45AFA0081F86D /* CoreLocation.framework in Frameworks */,
-				E71EF5BB1E0A5B0E001C1495 /* BaiduTraceSDK.framework in Frameworks */,
+				E7473F111DC1ED1F00057EC4 /* BaiduTraceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +211,7 @@
 		E1F21EB91BF447E40081F86D = {
 			isa = PBXGroup;
 			children = (
-				E71EF5BA1E0A5B0E001C1495 /* BaiduTraceSDK.framework */,
+				E7473F101DC1ED1F00057EC4 /* BaiduTraceSDK.framework */,
 				E7C3FE5A1D81088F00CA875A /* Framework */,
 				E1F21EC41BF447E40081F86D /* YingYanSDKDemo */,
 				E1F21EC31BF447E40081F86D /* Products */,
@@ -415,7 +415,7 @@
 				E1F21EBE1BF447E40081F86D /* Sources */,
 				E1F21EBF1BF447E40081F86D /* Frameworks */,
 				E1F21EC01BF447E40081F86D /* Resources */,
-				E71EF5BD1E0A5B0E001C1495 /* Embed Frameworks */,
+				E7473F131DC1ED2000057EC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

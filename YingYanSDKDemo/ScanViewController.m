@@ -85,12 +85,14 @@
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     NSLog(@"来到代理方法中");
-     NSString *QR_Code = nil;
+    NSString* QR_Code = nil;
     for (AVMetadataObject *metadata in metadataObjects) {
         if ([metadata.type isEqualToString:AVMetadataObjectTypeQRCode]){
             QR_Code = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
             _myTextView.text = [NSString stringWithFormat:@"二维码:%@",QR_Code];
-
+            
+            // 发送代理，并把文本框中的值传过去
+            [self.delegate2 getQRCodeValue:QR_Code];
             break;
         }
     }
@@ -102,16 +104,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    if(self.returnQRCode != nil){
-//        self.returnQRCode(_QR_Code);
-//    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    if (self.returnQRCode != nil){
-        self.returnQRCode(_myTextView.text);
-    }
     // Dispose of any resources that can be recreated.
 }
 

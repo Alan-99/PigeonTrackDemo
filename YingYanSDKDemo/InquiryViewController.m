@@ -11,8 +11,6 @@
 
 @interface InquiryViewController ()<ApplicationTrackDelegate, BMKMapViewDelegate, UITextFieldDelegate>
 
-@property (nonatomic, weak) IBOutlet UIButton *clearPathButton;
-
 @end
 
 @implementation InquiryViewController
@@ -37,8 +35,6 @@ static NSString *entityName;
 //        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addObject)];
 //        self.navigationItem.leftBarButtonItem = bbi;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"开始查询" style:UIBarButtonItemStylePlain target:self action:@selector(onClickQueryHistoryTrackButton:)];
-        
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"选择时间" style:UIBarButtonItemStylePlain target:self action:@selector(triggerDatePicker)];
     }
     return self;
 }
@@ -47,25 +43,37 @@ static NSString *entityName;
 - (void)viewDidLoad {
     [super viewDidLoad];
     _entityName2TextField.placeholder = @"请输入待查询信鸽名";
-    _entityName2TextField.returnKeyType = UIReturnKeyDone;
+    _entityName2TextField.returnKeyType = UIReturnKeyGo;
     // Do any additional setup after loading the view from its nib.
     global_queue_view2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+<<<<<<< HEAD
     
     UIButton *clearPathButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    clearPathButton.frame = CGRectMake(CGRectGetMaxX(_entityName2TextField.frame)+5, CGRectGetMinY(_entityName2TextField.frame), 30, 30);
     clearPathButton.frame = CGRectMake(10, 500, 32, 32);
     [clearPathButton setImage:[UIImage imageNamed:@"CrossIcon.png"] forState:UIControlStateNormal];
     [clearPathButton addTarget:self action:@selector(clearPath) forControlEvents:UIControlEventTouchUpInside];
-    
     self.clearPathButton = clearPathButton;
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    
+    [self.view addGestureRecognizer:tap];
     [self.view addSubview:self.clearPathButton];
+}
+
+- (void)closeKeyboard
+{
+    [self.view endEditing:YES];
 }
 
 - (void)clearPath
 {
     [_historyMapView removeAnnotations:_historyMapView.annotations];
     [_historyMapView removeOverlays:_historyMapView.overlays];
+=======
+>>>>>>> parent of 1e367a5... 20161225-无bug稳定版本
 }
 
 - (void)dealloc {
@@ -103,16 +111,12 @@ static NSString *entityName;
     // Pass the selected object to the new view controller.
 }
 */
-                                                                                                                                                           
-                                                                                                                                                           
-                                                                                                                                                        
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     _datePicker.hidden = true;
     _historyMapView.hidden = false;
 }
-                                                                                                                                                           
 
 - (IBAction)datePickerValueChanged:(UIDatePicker *)sender {
     NSString *timeInterval = [NSString stringWithFormat:@"%f", sender.date.timeIntervalSince1970];
@@ -120,16 +124,12 @@ static NSString *entityName;
     endTime = [NSString stringWithFormat:@"%lld", ([startTime longLongValue] + 24*3600 - 1)];
 }
 
-//- (IBAction)triggerDatePicker:(UIButton *)sender {
-//    _datePicker.hidden = false;
-//    _historyMapView.hidden = true;
-//}
-- (void)triggerDatePicker
-        {
-            _datePicker.hidden = false;
-            _historyMapView.hidden = true;
-            _clearPathButton.hidden = true;
-        }
+- (IBAction)triggerDatePicker:(UIButton *)sender {
+    _datePicker.hidden = false;
+    _historyMapView.hidden = true;
+}
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -146,7 +146,6 @@ static NSString *entityName;
 //}
 
 - (void)onClickQueryHistoryTrackButton:(UIButton *)sender {
-    self.clearPathButton.hidden = false;
     _datePicker.hidden = true;
     dispatch_async(global_queue_view2,^{
         extern int serviceId;
@@ -157,6 +156,7 @@ static NSString *entityName;
     [self textFieldShouldReturn:_entityName2TextField];
     _historyMapView.hidden = false;
 }
+
 
 - (void) onGetHistoryTrack:(NSData *)data {
     NSString *trackHistoryResult = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -226,6 +226,5 @@ static NSString *entityName;
     }
     return nil;
 }
-                                                                                                                                                           
 
 @end

@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ReturnQRCode)(NSString *qrCode);
+// 给ScanViewController定义一个协议
+@protocol ScanViewControllerDelegate <NSObject>
+
+- (void)getQRCodeValue:(NSString*)value;
+
+@end
 
 @interface ScanViewController : UIViewController
 
 @property (strong, nonatomic) UITextView* myTextView;
 
-@property (nonatomic, copy) ReturnQRCode returnQRCode;
-//@property NSString *QR_Code;
+// 此处利用协议给ScanViewController定义代理
+@property (nonatomic, unsafe_unretained) id<ScanViewControllerDelegate> delegate2;
 
 @end
