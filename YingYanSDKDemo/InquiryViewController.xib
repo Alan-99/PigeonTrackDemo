@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -42,30 +42,18 @@
                         <outlet property="delegate" destination="-1" id="as8-Ge-UQD"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG3-fI-RGd">
-                    <rect key="frame" x="156" y="119" width="62" height="30"/>
-                    <state key="normal" title="选择时间">
-                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="triggerDatePicker:" destination="-1" eventType="touchUpInside" id="csD-3S-s0Z"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="MHb-Hc-2ad" secondAttribute="bottom" id="2e3-3I-n13"/>
-                <constraint firstItem="gIm-tj-SOq" firstAttribute="top" secondItem="LG3-fI-RGd" secondAttribute="bottom" constant="50" id="8PG-fo-0AS"/>
+                <constraint firstItem="gIm-tj-SOq" firstAttribute="top" secondItem="AG3-Xw-Wt9" secondAttribute="bottom" constant="88" id="E2B-1O-7YW"/>
                 <constraint firstItem="AG3-Xw-Wt9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="81" id="Edt-sX-vHu"/>
                 <constraint firstAttribute="trailing" secondItem="AG3-Xw-Wt9" secondAttribute="trailing" constant="31" id="H3c-B0-gP4"/>
                 <constraint firstItem="MHb-Hc-2ad" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NOU-Ic-tVL"/>
-                <constraint firstItem="LG3-fI-RGd" firstAttribute="top" secondItem="AG3-Xw-Wt9" secondAttribute="bottom" constant="8" id="OyC-AR-AZ9"/>
                 <constraint firstAttribute="trailing" secondItem="MHb-Hc-2ad" secondAttribute="trailing" id="Qd1-KM-eDV"/>
                 <constraint firstItem="MHb-Hc-2ad" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eJh-xd-SEg"/>
                 <constraint firstItem="AG3-Xw-Wt9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="31" id="fc8-Fi-0Mi"/>
                 <constraint firstItem="gIm-tj-SOq" firstAttribute="centerX" secondItem="AG3-Xw-Wt9" secondAttribute="centerX" id="oI5-ls-0Ea"/>
-                <constraint firstItem="LG3-fI-RGd" firstAttribute="centerX" secondItem="AG3-Xw-Wt9" secondAttribute="centerX" id="y4o-n6-Qdc"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="307.5" y="306.5"/>

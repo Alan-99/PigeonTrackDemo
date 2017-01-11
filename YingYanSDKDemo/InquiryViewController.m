@@ -11,6 +11,8 @@
 
 @interface InquiryViewController ()<ApplicationTrackDelegate, BMKMapViewDelegate, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *clearPathButton;
+
 @end
 
 @implementation InquiryViewController
@@ -32,9 +34,8 @@ static NSString *entityName;
         
         self.navigationItem.title = @"查询";
         
-//        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addObject)];
-//        self.navigationItem.leftBarButtonItem = bbi;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"开始查询" style:UIBarButtonItemStylePlain target:self action:@selector(onClickQueryHistoryTrackButton:)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"选择时间" style:UIBarButtonItemStylePlain target:self action:@selector(triggerDatePicker)];
     }
     return self;
 }
@@ -44,9 +45,7 @@ static NSString *entityName;
     [super viewDidLoad];
     _entityName2TextField.placeholder = @"请输入待查询信鸽名";
     _entityName2TextField.returnKeyType = UIReturnKeyGo;
-    // Do any additional setup after loading the view from its nib.
     global_queue_view2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-<<<<<<< HEAD
     
     UIButton *clearPathButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    clearPathButton.frame = CGRectMake(CGRectGetMaxX(_entityName2TextField.frame)+5, CGRectGetMinY(_entityName2TextField.frame), 30, 30);
@@ -72,8 +71,7 @@ static NSString *entityName;
 {
     [_historyMapView removeAnnotations:_historyMapView.annotations];
     [_historyMapView removeOverlays:_historyMapView.overlays];
-=======
->>>>>>> parent of 1e367a5... 20161225-无bug稳定版本
+
 }
 
 - (void)dealloc {
@@ -124,7 +122,7 @@ static NSString *entityName;
     endTime = [NSString stringWithFormat:@"%lld", ([startTime longLongValue] + 24*3600 - 1)];
 }
 
-- (IBAction)triggerDatePicker:(UIButton *)sender {
+- (void)triggerDatePicker {
     _datePicker.hidden = false;
     _historyMapView.hidden = true;
 }

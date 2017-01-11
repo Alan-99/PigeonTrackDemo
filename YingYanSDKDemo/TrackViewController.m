@@ -27,7 +27,7 @@
 //@end
 
 
-@interface TrackViewController () <ApplicationServiceDelegate, ApplicationEntityDelegate, ApplicationTrackDelegate, ApplicationFenceDelegate, BMKGeoCodeSearchDelegate, BMKPoiSearchDelegate, BMKLocationServiceDelegate, BMKRouteSearchDelegate, UIAlertViewDelegate, BMKMapViewDelegate, UITextFieldDelegate, PDVCDelegate>
+@interface TrackViewController () <ApplicationServiceDelegate, ApplicationEntityDelegate, ApplicationTrackDelegate, ApplicationFenceDelegate, BMKGeoCodeSearchDelegate, BMKPoiSearchDelegate, BMKLocationServiceDelegate, UIAlertViewDelegate, BMKMapViewDelegate, UITextFieldDelegate, PDVCDelegate>
 {
     
     BMKPointAnnotation* entityAnnotation;
@@ -91,7 +91,7 @@ int mark;
     
 //    _routesearch = [[BMKRouteSearch alloc]init];
     
-//    _locationService = [[BMKLocationService alloc]init];
+    _locationService = [[BMKLocationService alloc]init];
     _mapView.isSelectedAnnotationViewFront = YES;
     
     global_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -167,17 +167,14 @@ int mark;
 -(void)viewWillAppear:(BOOL)animated {
     NSLog(@"first viewWillAppear");
     _mapView.delegate = self;
-    
-//    _routesearch.delegate = self;
-    
     _poisearch.delegate = self;
-//    _locationService.delegate = self;
-//    [self startFollowing]; // 开启此行代码，手机定位点会向轨迹服务台上传数据
+    _locationService.delegate = self;
     [self doWork];
 }
 
 
 -(void)applicationWillResignActive {
+    [_mapView removeAnnotation:entityAnnotation];
     NSLog(@"程序即将进入后台执行");
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
@@ -190,11 +187,9 @@ int mark;
 }
 
 -(void)applicationDidBecomeActive {
-    
     _poisearch.delegate = self;
-//    _routesearch.delegate = self;
     
-//    _locationService.delegate = self;
+    _locationService.delegate = self;
 //    [self startFollowing];
     [self doWork];
     NSLog(@"程序已经进入前台执行");
@@ -206,12 +201,12 @@ int mark;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
+    [_mapView removeAnnotation:entityAnnotation];
     NSLog(@"first viewWillDisappear");
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
     _poisearch.delegate = nil;
-//    _locationService.delegate = nil;
-    _routesearch.delegate = nil;
+    _locationService.delegate = nil;
     entityAnnotation = nil;
     circleFence = nil;
     [timer invalidate];
@@ -257,68 +252,68 @@ int mark;
 
 #pragma mark - 定位功能
 
-//- (void)startFollowing
-//{
-//    NSLog(@"进入跟随态");
-//    dispatch_async(dispatch_get_main_queue(), ^{
-////        [_locationService startUserLocationService];
-//        _mapView.showsUserLocation = NO;
-//        _mapView.userTrackingMode = BMKUserTrackingModeFollow; // 定位跟随模式，我的位置始终在地图中心，我的位置图标会旋转，地图不会旋转
-//        _mapView.showsUserLocation = YES;
-//    });
-//
-//}
-//
-//- (void)stopLocation
-//{
-//    NSLog(@"停止定位功能");
-////    [_locationService stopUserLocationService];
-//    _mapView.showsUserLocation = NO;
-//}
-//
-///**
-// * 用户方向更新后，会调用此函数
-// */
-//- (void)willStartLocatingUser
-//{
-//    NSLog(@"start locate");
-//}
-//
-///**
-// * 用户方向更新后，会调用此函数
-// */
-//
-//- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
-//{
-//    [_mapView updateLocationData:userLocation];
-////    NSLog(@"heading is %@", userLocation.heading);
-//}
-//
-// 
-// /**
-// * @param userLocation 新的用户位置
-// **/
-//- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
-//{
-//    [_mapView updateLocationData:userLocation];
-//}
-//
-///**
-// * 在地图View停止定位后，会调用此函数
-// * @param mapView 地图View
-// */
-//- (void)didStopLocatingUser
-//{
-//    NSLog(@"stop locate");
-//}
-//
-///**
-// * 定位失败后，会调用此函数
-// */
-//- (void)didFailToLocateUserWithError:(NSError *)error
-//{
-//    NSLog(@"locate error");
-//}
+- (void)startFollowing
+{
+    NSLog(@"进入跟随态");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_locationService startUserLocationService];
+        _mapView.showsUserLocation = NO;
+        _mapView.userTrackingMode = BMKUserTrackingModeFollow; // 定位跟随模式，我的位置始终在地图中心，我的位置图标会旋转，地图不会旋转
+        _mapView.showsUserLocation = YES;
+    });
+
+}
+
+- (void)stopLocation
+{
+    NSLog(@"停止定位功能");
+    [_locationService stopUserLocationService];
+    _mapView.showsUserLocation = NO;
+}
+
+/**
+ * 用户方向更新后，会调用此函数
+ */
+- (void)willStartLocatingUser
+{
+    NSLog(@"start locate");
+}
+
+/**
+ * 用户方向更新后，会调用此函数
+ */
+
+- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
+{
+    [_mapView updateLocationData:userLocation];
+//    NSLog(@"heading is %@", userLocation.heading);
+}
+
+ 
+ /**
+ * @param userLocation 新的用户位置
+ **/
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
+{
+    [_mapView updateLocationData:userLocation];
+}
+
+/**
+ * 在地图View停止定位后，会调用此函数
+ * @param mapView 地图View
+ */
+- (void)didStopLocatingUser
+{
+    NSLog(@"stop locate");
+}
+
+/**
+ * 定位失败后，会调用此函数
+ */
+- (void)didFailToLocateUserWithError:(NSError *)error
+{
+    NSLog(@"locate error");
+}
 
 
 //- (BMKAnnotationView*)getMarkAnnotationView:(BMKMapView*)mapView viewForAnnotation:(MarkAnnotation*)markAnnotation
@@ -412,18 +407,17 @@ int mark;
 
 
 -(void) doWork {
-//    entityName = _entityNameTextField.text;
     
     if (entityName == nil || entityName == NULL) {
         NSLog(@"dowork1:%@", entityName);
-//        [self startFollowing];
+        [self startFollowing];
         
     }else if ([entityName isKindOfClass:[NSNull class]]){
         NSLog(@"dowork2:%@", entityName);
-//        [self startFollowing];
+        [self startFollowing];
     }else if([[entityName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
         NSLog(@"dowork3:%@",entityName);
-//        [self startFollowing];
+        [self startFollowing];
         
     }else {
         
@@ -439,12 +433,12 @@ int mark;
         _mapView.delegate = self;
         _mapView.zoomLevel = 13;
         
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self stopLocation];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self stopLocation];
 //            [_locationService stopUserLocationService];
 //            _mapView.showsUserLocation = NO;
-//        });
-//        
+        });
+        
         //视图加载之后就请求实时位置
         [self queryEntityList];
         //查找当前的围栏列表
@@ -488,6 +482,7 @@ int mark;
     
     if(textField == _entityNameTextField)
     {
+        entityName = _entityNameTextField.text;
         [self doWork];
 //        [self.navigationItem.leftBarButtonItem setEnabled:YES];
 
@@ -604,20 +599,6 @@ int mark;
     {
         NSArray *entities = [dic objectForKey:@"entities"];
         NSArray *entities2 = [NSArray arrayWithArray:entities];
-//        [entities2 enumerateObjectsUsingBlock:^(NSMutableDictionary *obj, NSUInteger idx, BOOL *stop) {
-//            NSDictionary *entity = [entities2 objectAtIndex:i];
-//            NSDictionary *realtimePoint = [entity objectForKey:@"realtime_point"];
-//            NSArray *location = [realtimePoint objectForKey:@"location"];
-//            longitudeOfEntity = [[location objectAtIndex:0] doubleValue];
-//            latitudeOfEntity = [[location objectAtIndex:1] doubleValue];
-//            extern double const EPSILON;
-//            if (fabs(longitudeOfEntity - 0) < EPSILON && fabs(latitudeOfEntity - 0) < EPSILON)
-//            {
-//                continue;
-//                *stop = YES;
-//            }
-//            [self addPointAnnotation];
-//        }];
         for (int i = 0; i < [entities2 count]; i++)
         {
             NSDictionary *entity = [entities2 objectAtIndex:i];
@@ -630,10 +611,7 @@ int mark;
             {
                 continue;
             }
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [_mapView removeOverlays:_mapView.overlays];
-//                [_mapView removeAnnotations:_mapView.annotations];
-//            });
+
             [self addPointAnnotation];
         }
     }

@@ -26,7 +26,7 @@
     // 自定义大头针图片
     NSString *_icon;
     
-//    BMKLocationService *_locationService; //定位
+    BMKLocationService *_locationService; //定位
     BMKPoiSearch* _poisearch; // 对应<BaiduMapAPI_Search/BMKSearchComponent.h>头文件
     BMKRouteSearch* _routesearch;
     int curPage;
