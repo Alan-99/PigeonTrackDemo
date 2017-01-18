@@ -67,6 +67,9 @@
 		E7C3FE671D8109A500CA875A /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */; };
 		E7C3FE681D8109A500CA875A /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */; };
 		E7C3FE6A1D8109BF00CA875A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C3FE691D8109BF00CA875A /* mapapi.bundle */; };
+		E7D613531E2DC3BA00AD2D3F /* PigeonNameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D613511E2DC3BA00AD2D3F /* PigeonNameTableViewController.m */; };
+		E7D613541E2DC3BA00AD2D3F /* PigeonNameTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7D613521E2DC3BA00AD2D3F /* PigeonNameTableViewController.xib */; };
+		E7D613561E2DCB1100AD2D3F /* pigeonName.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D613551E2DCB1100AD2D3F /* pigeonName.plist */; };
 		E7EEDCAA1E07B17D00703A89 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EEDCA91E07B17D00703A89 /* Item.m */; };
 		E7F39F301E00DB91001F8A36 /* AutoCompletionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F39F2F1E00DB91001F8A36 /* AutoCompletionTableView.m */; };
 /* End PBXBuildFile section */
@@ -174,6 +177,10 @@
 		E7C3FE601D8109A500CA875A /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapAPI/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
 		E7C3FE611D8109A500CA875A /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapAPI/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		E7C3FE691D8109BF00CA875A /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		E7D613501E2DC3BA00AD2D3F /* PigeonNameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PigeonNameTableViewController.h; sourceTree = "<group>"; };
+		E7D613511E2DC3BA00AD2D3F /* PigeonNameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PigeonNameTableViewController.m; sourceTree = "<group>"; };
+		E7D613521E2DC3BA00AD2D3F /* PigeonNameTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PigeonNameTableViewController.xib; sourceTree = "<group>"; };
+		E7D613551E2DCB1100AD2D3F /* pigeonName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pigeonName.plist; sourceTree = "<group>"; };
 		E7EEDCA81E07B17D00703A89 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		E7EEDCA91E07B17D00703A89 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		E7F39F2E1E00DB91001F8A36 /* AutoCompletionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompletionTableView.h; sourceTree = "<group>"; };
@@ -265,6 +272,10 @@
 				E747331F1DB4B32600E586D3 /* PegionDetailViewController.h */,
 				E74733201DB4B32600E586D3 /* PegionDetailViewController.m */,
 				E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */,
+				E7D613501E2DC3BA00AD2D3F /* PigeonNameTableViewController.h */,
+				E7D613511E2DC3BA00AD2D3F /* PigeonNameTableViewController.m */,
+				E7D613521E2DC3BA00AD2D3F /* PigeonNameTableViewController.xib */,
+				E7D613551E2DCB1100AD2D3F /* pigeonName.plist */,
 				E7EEDCA81E07B17D00703A89 /* Item.h */,
 				E7EEDCA91E07B17D00703A89 /* Item.m */,
 				E7F39F2E1E00DB91001F8A36 /* AutoCompletionTableView.h */,
@@ -468,7 +479,9 @@
 				E77AB8741D6FB7CA007B616F /* CommunityViewController.xib in Resources */,
 				E74733231DB4B32600E586D3 /* PegionDetailViewController.xib in Resources */,
 				E7B602721DF1129F00EFE9F4 /* NickNameViewController.xib in Resources */,
+				E7D613541E2DC3BA00AD2D3F /* PigeonNameTableViewController.xib in Resources */,
 				E7B6028B1DF11ED600EFE9F4 /* MySettingViewController.xib in Resources */,
+				E7D613561E2DCB1100AD2D3F /* pigeonName.plist in Resources */,
 				E79340181D6C74EE00163791 /* TrackViewController.xib in Resources */,
 				E1F21ED81BF447E40081F86D /* LaunchScreen.storyboard in Resources */,
 				E722E7FD1D6560CE0061B1B4 /* InquiryViewController.xib in Resources */,
@@ -495,6 +508,7 @@
 				E7B6026A1DF01E8700EFE9F4 /* CellGroupModel.m in Sources */,
 				E74733391DB84FA500E586D3 /* ScanViewController.m in Sources */,
 				E7B602671DF01E3500EFE9F4 /* ArrowCellModel.m in Sources */,
+				E7D613531E2DC3BA00AD2D3F /* PigeonNameTableViewController.m in Sources */,
 				E74733221DB4B32600E586D3 /* PegionDetailViewController.m in Sources */,
 				E1F21ECA1BF447E40081F86D /* AppDelegate.mm in Sources */,
 				E7B46D0C1D867D1300707A8F /* MarkAnnotation.m in Sources */,

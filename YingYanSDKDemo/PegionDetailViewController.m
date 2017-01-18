@@ -9,30 +9,29 @@
 #import "PegionDetailViewController.h"
 #import "ScanViewController.h"
 
-#import "AutoCompletionTableView.h"
-
 #import <QuartzCore/QuartzCore.h>
 #import "Item.h"
 
+#import "AutoCompletionTableView.h"
+
 @interface PegionDetailViewController ()
+
 @property (nonatomic, strong) AutoCompletionTableView *pegionNameAutoCompleter;
 @property (nonatomic, strong) AutoCompletionTableView *pegionSexAutoCompleter;
 @property (nonatomic, strong) AutoCompletionTableView *pegionFurcolorCompleter;
-@property (nonatomic, strong) UIView *tableViewBackView;
 
 @end
 
 @implementation PegionDetailViewController
-//
-//- (void)inputTextField {
-//    self.nameTextField = [[UITextField alloc]initWithFrame:CGRectMake(15, 80, self.view.frame.size.width-30, 40)];
-//    _nameTextField.borderStyle = UITextBorderStyleRoundedRect;
-//    _nameTextField.font = [UIFont fontWithName:@"Century Gothic" size:14.0f];
-//    _nameTextField.placeholder = @"EnityName";
-//    _nameTextField.delegate = self;
-//    [self.view addSubview:self.nameTextField];
-//
-//}
+
+@synthesize pegionNameField = _pegionNameField;
+@synthesize pegionNumberField = _pegionNumberField;
+@synthesize pegionSexField = _pegionSexField;
+@synthesize pegionFurcolorField = _pegionFurcolorField;
+
+@synthesize pegionNameAutoCompleter = _pegionNameAutoCompleter;
+@synthesize pegionSexAutoCompleter = _pegionSexAutoCompleter;
+@synthesize pegionFurcolorCompleter = _pegionFurcolorCompleter;
 
 - (AutoCompletionTableView *)pegionNameAutoCompleter
 {
@@ -40,62 +39,60 @@
         NSMutableDictionary *options = [NSMutableDictionary dictionaryWithCapacity:5];
         [options setValue:[NSNumber numberWithBool:YES] forKey:ACOCaseSensitive];
         [options setValue:nil forKey:ACOUseSourceFont];
-        
-//        _autoCompleter = [[AutoCompletionTableView alloc]initWithTextField:self.nameTextField inViewController:self withOptions:options];
 
         _pegionNameAutoCompleter = [[AutoCompletionTableView alloc]initWithTextField:self.pegionNameField inViewController:self withOptions:options];
         _pegionNameAutoCompleter.autoCompleteDelegate = self;
         
         //这个阵列与推荐单词无关
         _pegionNameAutoCompleter.suggestionsDictionary = [NSArray arrayWithObjects:
-//                                                @"pegion0705",
-//                                                @"pegion0720",
-//                                                @"haha0910",
-//                                                @"haha0911",
-//                                                @"haha0912",
-//                                                @"haha0913",
-//                                                @"haha0914",
-//                                                @"haha0915",
-//                                                @"haha0916",
-//                                                @"haha0917",
-//                                                @"haha0918",
-//                                                @"haha0919",
-//                                                @"haha0920",
-//                                                @"haha0921",
-//                                                @"haha0922",
-//                                                @"haha0923",
-//                                                @"haha0924",
-//                                                @"haha0925",
-//                                                @"haha0926",
-//                                                @"haha0927",
-//                                                @"haha0928",
-//                                                @"haha0929",
-//                                                @"haha0930",
-//                                                @"haha1001",
-//                                                @"haha1002",
-//                                                @"haha1003",
-//                                                @"haha1004",
-//                                                @"haha1005",
-//                                                @"haha1006",
-//                                                @"haha1007",
-//                                                @"haha1008",
-//                                                @"haha1009",
-//                                                @"201609134",
-//                                                @"201609135",
-//                                                @"201609136",
-//                                                @"201609137",
-//                                                @"201609138",
-//                                                @"201609139",
-//                                                @"201609140",
-//                                                @"201609141",
-//                                                @"201609142",
-//                                                @"201609143",
-//                                                @"201609144",
-//                                                @"201609145",
-//                                                @"201609146",
-//                                                @"201609147",
-//                                                @"201609148",
-//                                                @"201609149",
+                                                @"pegion0705",
+                                                @"pegion0720",
+                                                @"haha0910",
+                                                @"haha0911",
+                                                @"haha0912",
+                                                @"haha0913",
+                                                @"haha0914",
+                                                @"haha0915",
+                                                @"haha0916",
+                                                @"haha0917",
+                                                @"haha0918",
+                                                @"haha0919",
+                                                @"haha0920",
+                                                @"haha0921",
+                                                @"haha0922",
+                                                @"haha0923",
+                                                @"haha0924",
+                                                @"haha0925",
+                                                @"haha0926",
+                                                @"haha0927",
+                                                @"haha0928",
+                                                @"haha0929",
+                                                @"haha0930",
+                                                @"haha1001",
+                                                @"haha1002",
+                                                @"haha1003",
+                                                @"haha1004",
+                                                @"haha1005",
+                                                @"haha1006",
+                                                @"haha1007",
+                                                @"haha1008",
+                                                @"haha1009",
+                                                @"201609134",
+                                                @"201609135",
+                                                @"201609136",
+                                                @"201609137",
+                                                @"201609138",
+                                                @"201609139",
+                                                @"201609140",
+                                                @"201609141",
+                                                @"201609142",
+                                                @"201609143",
+                                                @"201609144",
+                                                @"201609145",
+                                                @"201609146",
+                                                @"201609147",
+                                                @"201609148",
+                                                @"201609149",
                                                 nil];
     }
     return _pegionNameAutoCompleter;
@@ -207,18 +204,22 @@
 
 - (void) autoCompletion:(AutoCompletionTableView*) completer didSelectAutoCompleteSuggestionWithIndex:(NSInteger) index{
     // invoked when an available suggestion is selected
-    NSLog(@"%@ - Suggestion chosen: %ld", completer, (long)index);
+    NSLog(@"%@ - Suggestion chosen: %ld", completer, index);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)];
-    tap.numberOfTapsRequired = 1;
-    tap.numberOfTouchesRequired = 1;
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)];
+//    tap.numberOfTapsRequired = 1;
+//    tap.numberOfTouchesRequired = 1;
+//    
+//    [self.view addGestureRecognizer:tap];
     
-    [self.view addGestureRecognizer:tap];
+    _pegionNameField.placeholder = @"请输入待跟踪信鸽名";
+    _pegionNameField.returnKeyType = UIReturnKeyGo;
+    _pegionNumberField.placeholder = @"请输入待跟踪设备号";
+    _pegionNumberField.returnKeyType = UIReturnKeyGo;
     
-//    [self.nameTextField addTarget:self.autoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pegionNameField addTarget:self.pegionNameAutoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pegionSexField addTarget:self.pegionSexAutoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pegionFurcolorField addTarget:self.pegionFurcolorAutoCompleter action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -251,15 +252,15 @@
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
     
-//    Item *i = self.item;
-//    i.pigeonName = self.pegionNameField.text;
-//    i.pigeonSex = self.pegionSexField.text;
-//    i.pigeonNumber = self.pegionNumberField.text;
-//    i.pigeonFurcolor = self.pegionFurcolorField.text;
-    self.item.pigeonName = self.pegionNameField.text;
-    self.item.pigeonSex = self.pegionSexField.text;
-    self.item.pigeonNumber = self.pegionNumberField.text;
-    self.item.pigeonFurcolor = self.pegionFurcolorField.text;
+    Item *i = self.item;
+    i.pigeonName = self.pegionNameField.text;
+    i.pigeonSex = self.pegionSexField.text;
+    i.pigeonNumber = self.pegionNumberField.text;
+    i.pigeonFurcolor = self.pegionFurcolorField.text;
+//    self.item.pigeonName = self.pegionNameField.text;
+//    self.item.pigeonSex = self.pegionSexField.text;
+//    self.item.pigeonNumber = self.pegionNumberField.text;
+//    self.item.pigeonFurcolor = self.pegionFurcolorField.text;
 }
 
 - (void)didReceiveMemoryWarning {

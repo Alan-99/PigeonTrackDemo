@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>deviceNumber</key>
+		<string>201609135</string>
+		<key>name</key>
+		<string>赤赤</string>
+	</dict>
+	<dict>
+		<key>deviceNumber</key>
+		<string>201609140</string>
+		<key>name</key>
+		<string>橙橙</string>
+	</dict>
+	<dict>
+		<key>deviceNumber</key>
+		<string>201611040</string>
+		<key>name</key>
+		<string>蓝蓝</string>
+	</dict>
+	<dict>
+		<key>deviceNumber</key>
+		<string>201611039</string>
+		<key>name</key>
+		<string>绿绿</string>
+	</dict>
+	<dict>
+		<key>deviceNumber</key>
+		<string>201612040</string>
+		<key>name</key>
+		<string>青青</string>
+	</dict>
+	<dict>
+		<key>deviceNumber</key>
+		<string>201612039</string>
+		<key>name</key>
+		<string>紫紫</string>
+	</dict>
+</array>
+</plist>

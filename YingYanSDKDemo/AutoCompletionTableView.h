@@ -43,7 +43,7 @@
 
 @end
 
-@interface AutoCompletionTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
+@interface AutoCompletionTableView : UITableView <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 // dictionary of nsstrings of your auto-completion terms
 @property (nonatomic, strong) NSArray *suggestionsDictionary;
 
