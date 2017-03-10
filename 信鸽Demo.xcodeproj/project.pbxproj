@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054AC6C1DE5E0D414832DEBA /* libPods-信鸽Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A357D66D9341481578B1A416 /* libPods-信鸽Demo.a */; };
 		E1F21EC71BF447E40081F86D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F21EC61BF447E40081F86D /* main.m */; };
 		E1F21ECA1BF447E40081F86D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1F21EC91BF447E40081F86D /* AppDelegate.mm */; };
 		E1F21ED51BF447E40081F86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F21ED41BF447E40081F86D /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 		E77AB8731D6FB7CA007B616F /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E77AB8711D6FB7CA007B616F /* CommunityViewController.m */; };
 		E77AB8741D6FB7CA007B616F /* CommunityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77AB8721D6FB7CA007B616F /* CommunityViewController.xib */; };
 		E77C20251D47535600B05823 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E77C20231D47535600B05823 /* TrackViewController.m */; };
+		E78501D51E7143AF00F8844C /* SignUpLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78501D31E7143AF00F8844C /* SignUpLogInViewController.m */; };
+		E78501D61E7143AF00F8844C /* SignUpLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78501D41E7143AF00F8844C /* SignUpLogInViewController.xib */; };
 		E79340181D6C74EE00163791 /* TrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E793401A1D6C74EE00163791 /* TrackViewController.xib */; };
 		E7B46D0C1D867D1300707A8F /* MarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B46D0B1D867D1300707A8F /* MarkAnnotation.m */; };
 		E7B602211DED2D6E00EFE9F4 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B602201DED2D6E00EFE9F4 /* BaseTableViewController.m */; };
@@ -89,6 +92,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9BEE00CBE2C6343F1D244BBF /* Pods-信鸽Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-信鸽Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-信鸽Demo/Pods-信鸽Demo.release.xcconfig"; sourceTree = "<group>"; };
+		A357D66D9341481578B1A416 /* libPods-信鸽Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-信鸽Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B458067FE76F508B6E7FBA07 /* Pods-信鸽Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-信鸽Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-信鸽Demo/Pods-信鸽Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		E1F21EC21BF447E40081F86D /* 信鸽Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "信鸽Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F21EC61BF447E40081F86D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1F21EC81BF447E40081F86D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +129,9 @@
 		E77AB8721D6FB7CA007B616F /* CommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityViewController.xib; sourceTree = "<group>"; };
 		E77C20221D47535600B05823 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
 		E77C20231D47535600B05823 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
+		E78501D21E7143AF00F8844C /* SignUpLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpLogInViewController.h; sourceTree = "<group>"; };
+		E78501D31E7143AF00F8844C /* SignUpLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpLogInViewController.m; sourceTree = "<group>"; };
+		E78501D41E7143AF00F8844C /* SignUpLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpLogInViewController.xib; sourceTree = "<group>"; };
 		E79340191D6C74EE00163791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TrackViewController.xib; sourceTree = "<group>"; };
 		E7B46D0A1D867D1300707A8F /* MarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkAnnotation.h; sourceTree = "<group>"; };
 		E7B46D0B1D867D1300707A8F /* MarkAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkAnnotation.m; sourceTree = "<group>"; };
@@ -209,12 +218,30 @@
 				E1F21EED1BF45B040081F86D /* QuartzCore.framework in Frameworks */,
 				E1F21EEB1BF45AFA0081F86D /* CoreLocation.framework in Frameworks */,
 				E7473F111DC1ED1F00057EC4 /* BaiduTraceSDK.framework in Frameworks */,
+				054AC6C1DE5E0D414832DEBA /* libPods-信鸽Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BB17DEDE6960A277DB12DA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B458067FE76F508B6E7FBA07 /* Pods-信鸽Demo.debug.xcconfig */,
+				9BEE00CBE2C6343F1D244BBF /* Pods-信鸽Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAA0EB6935489C7CEF4A7ECB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A357D66D9341481578B1A416 /* libPods-信鸽Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1F21EB91BF447E40081F86D = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +249,8 @@
 				E7C3FE5A1D81088F00CA875A /* Framework */,
 				E1F21EC41BF447E40081F86D /* YingYanSDKDemo */,
 				E1F21EC31BF447E40081F86D /* Products */,
+				9BB17DEDE6960A277DB12DA7 /* Pods */,
+				CAA0EB6935489C7CEF4A7ECB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +298,9 @@
 				E77C20221D47535600B05823 /* TrackViewController.h */,
 				E77C20231D47535600B05823 /* TrackViewController.m */,
 				E793401A1D6C74EE00163791 /* TrackViewController.xib */,
+				E78501D21E7143AF00F8844C /* SignUpLogInViewController.h */,
+				E78501D31E7143AF00F8844C /* SignUpLogInViewController.m */,
+				E78501D41E7143AF00F8844C /* SignUpLogInViewController.xib */,
 				E747331F1DB4B32600E586D3 /* PegionDetailViewController.h */,
 				E74733201DB4B32600E586D3 /* PegionDetailViewController.m */,
 				E74733211DB4B32600E586D3 /* PegionDetailViewController.xib */,
@@ -423,10 +455,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1F21EDC1BF447E40081F86D /* Build configuration list for PBXNativeTarget "信鸽Demo" */;
 			buildPhases = (
+				62724814628C894259818CF3 /* [CP] Check Pods Manifest.lock */,
 				E1F21EBE1BF447E40081F86D /* Sources */,
 				E1F21EBF1BF447E40081F86D /* Frameworks */,
 				E1F21EC01BF447E40081F86D /* Resources */,
 				E7473F131DC1ED2000057EC4 /* Embed Frameworks */,
+				0744F477DA3A1A533EE47F56 /* [CP] Embed Pods Frameworks */,
+				2D67687228C9B3DB110AE9C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -483,6 +518,7 @@
 				E7B6028B1DF11ED600EFE9F4 /* MySettingViewController.xib in Resources */,
 				E7D613561E2DCB1100AD2D3F /* pigeonName.plist in Resources */,
 				E79340181D6C74EE00163791 /* TrackViewController.xib in Resources */,
+				E78501D61E7143AF00F8844C /* SignUpLogInViewController.xib in Resources */,
 				E1F21ED81BF447E40081F86D /* LaunchScreen.storyboard in Resources */,
 				E722E7FD1D6560CE0061B1B4 /* InquiryViewController.xib in Resources */,
 				E7B6027C1DF11E9200EFE9F4 /* GloriesViewController.xib in Resources */,
@@ -496,6 +532,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0744F477DA3A1A533EE47F56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-信鸽Demo/Pods-信鸽Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D67687228C9B3DB110AE9C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-信鸽Demo/Pods-信鸽Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62724814628C894259818CF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1F21EBE1BF447E40081F86D /* Sources */ = {
@@ -513,6 +597,7 @@
 				E1F21ECA1BF447E40081F86D /* AppDelegate.mm in Sources */,
 				E7B46D0C1D867D1300707A8F /* MarkAnnotation.m in Sources */,
 				E77C20251D47535600B05823 /* TrackViewController.m in Sources */,
+				E78501D51E7143AF00F8844C /* SignUpLogInViewController.m in Sources */,
 				E7B68AC81DAC8E9700844A62 /* FFDropDownMenuBasedCell.m in Sources */,
 				E7EEDCAA1E07B17D00703A89 /* Item.m in Sources */,
 				E7B6028A1DF11ED600EFE9F4 /* MySettingViewController.m in Sources */,
@@ -605,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -646,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -655,6 +740,7 @@
 		};
 		E1F21EDD1BF447E40081F86D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B458067FE76F508B6E7FBA07 /* Pods-信鸽Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -682,6 +768,7 @@
 		};
 		E1F21EDE1BF447E40081F86D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEE00CBE2C6343F1D244BBF /* Pods-信鸽Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

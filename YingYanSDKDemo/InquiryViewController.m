@@ -9,19 +9,110 @@
 #import "InquiryViewController.h"
 #import "TrackViewController.h"
 
-@interface InquiryViewController ()<ApplicationTrackDelegate, BMKMapViewDelegate, UITextFieldDelegate>
+@interface InquiryViewController ()<ApplicationTrackDelegate, BMKMapViewDelegate, UITextFieldDelegate, AutoCompletionTableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *clearPathButton;
-
+@property (nonatomic, strong) AutoCompletionTableView *entityName2Completer;
 @end
 
 @implementation InquiryViewController
 
 dispatch_queue_t global_queue_view2;
-
 NSString *startTime;
 NSString *endTime;
 static NSString *entityName;
+
+- (AutoCompletionTableView *)entityName2Completer
+{
+    if (!_entityName2Completer)
+    {
+        NSMutableDictionary *options = [NSMutableDictionary dictionaryWithCapacity:2];
+        [options setValue:[NSNumber numberWithBool:YES] forKey:ACOCaseSensitive];
+        [options setValue:nil forKey:ACOUseSourceFont];
+        
+        _entityName2Completer = [[AutoCompletionTableView alloc] initWithTextField:self.entityName2TextField inViewController:self withOptions:options];
+        _entityName2Completer.autoCompleteDelegate = self;
+        _entityName2Completer.suggestionsDictionary = [NSArray arrayWithObjects:
+                                                       @"1064812500279",
+                                                       @"1064812500280",
+                                                       @"1064812500281",
+                                                       @"1064812500282",
+                                                       @"1064812500283",
+                                                       @"1064812500284",
+                                                       @"1064812500285",
+                                                       @"1064812500286",
+                                                       @"1064812500287",
+                                                       @"1064812500288",
+                                                       @"1064812500289",
+                                                       @"1064812500290",
+                                                       @"1064812500291",
+                                                       @"1064812500292",
+                                                       @"1064812500293",
+                                                       @"1064812500294",
+                                                       @"1064812500295",
+                                                       @"1064812500296",
+                                                       @"1064812500297",
+                                                       @"1064812500298",
+                                                       @"201611040",
+                                                       @"201612040",
+                                                       @"201609135",
+                                                       @"201609140",
+                                                       @"0107",
+                                                       nil];
+    }
+    
+    return _entityName2Completer;
+}
+
+- (NSArray *)autoCompletion:(AutoCompletionTableView *)completer suggestionsFor:(NSString *)string
+{
+    return [NSArray arrayWithObjects:
+            @"1064812500279",
+            @"1064812500280",
+            @"1064812500281",
+            @"1064812500282",
+            @"1064812500283",
+            @"1064812500284",
+            @"1064812500285",
+            @"1064812500286",
+            @"1064812500287",
+            @"1064812500288",
+            @"1064812500289",
+            @"1064812500290",
+            @"1064812500291",
+            @"1064812500292",
+            @"1064812500293",
+            @"1064812500294",
+            @"1064812500295",
+            @"1064812500296",
+            @"1064812500297",
+            @"1064812500298",
+            @"201611040",
+            @"201612040",
+            @"0107",
+            @"201609134",
+            @"201609135",
+            @"201609136",
+            @"201609137",
+            @"201609138",
+            @"201609139",
+            @"201609140",
+            @"201609141",
+            @"201609142",
+            @"201609143",
+            @"201609144",
+            @"201609145",
+            @"201609146",
+            @"201609147",
+            @"201609148",
+            @"201609149",
+            nil];
+}
+
+- (void) autoCompletion:(AutoCompletionTableView*) completer didSelectAutoCompleteSuggestionWithIndex:(NSInteger) index{
+    // invoked when an available suggestion is selected
+    NSLog(@"%@ - Suggestion chosen: %ld", completer, index);
+}
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,7 +134,7 @@ static NSString *entityName;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _entityName2TextField.placeholder = @"请输入待查询信鸽名";
+    _entityName2TextField.placeholder = @"请输入待查询设备号";
     _entityName2TextField.returnKeyType = UIReturnKeyGo;
     global_queue_view2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
@@ -53,13 +144,15 @@ static NSString *entityName;
     [clearPathButton setImage:[UIImage imageNamed:@"CrossIcon.png"] forState:UIControlStateNormal];
     [clearPathButton addTarget:self action:@selector(clearPath) forControlEvents:UIControlEventTouchUpInside];
     self.clearPathButton = clearPathButton;
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)];
-    tap.numberOfTapsRequired = 1;
-    tap.numberOfTouchesRequired = 1;
-    
-    [self.view addGestureRecognizer:tap];
+
+    //关闭键盘的tap和选中tableView的cell的tap冲突了。。。
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyboard)];
+//    tap.numberOfTapsRequired = 1;
+//    tap.numberOfTouchesRequired = 1;
+//    [self.view addGestureRecognizer:tap];
     [self.view addSubview:self.clearPathButton];
+    
+    [self.entityName2TextField addTarget:self.entityName2Completer action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)closeKeyboard

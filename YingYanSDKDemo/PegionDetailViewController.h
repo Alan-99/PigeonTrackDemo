@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ScanViewController.h"
+#import "AutoCompletionTableView.h"
 
 @class Item;
 
-@protocol AutoCompletionTableViewDelegate;
-
 @protocol PDVCDelegate <NSObject>
-- (void)getPegionNameValue:(NSString*)value;
+- (void)getPegionNumberValue:(NSString*)value;
 @end
 
 @interface PegionDetailViewController : UIViewController <UITextFieldDelegate, ScanViewControllerDelegate, AutoCompletionTableViewDelegate>

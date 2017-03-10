@@ -35,7 +35,7 @@
 
 - (void)addLabel
 {
-    CGRect frame = CGRectMake(50, 380, 280, 40);
+    CGRect frame = CGRectMake(50, 380, 280, 60);
     _myTextView = [[UITextView alloc]initWithFrame:frame];
     
     _myTextView.backgroundColor = [UIColor clearColor];
@@ -90,9 +90,6 @@
         if ([metadata.type isEqualToString:AVMetadataObjectTypeQRCode]){
             QR_Code = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
             _myTextView.text = [NSString stringWithFormat:@"二维码:%@",QR_Code];
-            
-            // 发送代理，并把文本框中的值传过去
-            [self.delegate2 getQRCodeValue:QR_Code];
             break;
         }
     }
@@ -103,6 +100,9 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    if (self.myTextView != nil) {
+        [self.delegate2 getQRCodeValue:_myTextView.text];
+    }
     [super viewWillDisappear:animated];
 }
 

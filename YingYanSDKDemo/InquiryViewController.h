@@ -14,6 +14,8 @@
 #import <stdlib.h>
 #import "TrackViewController.h"
 
+#import "AutoCompletionTableView.h"
+
 @interface InquiryViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet BMKMapView *historyMapView;

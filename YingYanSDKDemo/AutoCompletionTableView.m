@@ -29,8 +29,8 @@
 {
     self.options = options;
     // frame must aligh to the textField
-    // 240:改变整个table的高度？
-    CGRect frame = CGRectMake(textField.frame.origin.x, CGRectGetMaxY(textField.frame), textField.frame.size.width, 240);
+    // 220:改变整个table的高度？默认cell的高度是44
+    CGRect frame = CGRectMake(textField.frame.origin.x, CGRectGetMaxY(textField.frame), textField.frame.size.width, 220);
 //
 //    CGRect frame = CGRectMake(textField.frame.origin.x, textField.frame.origin.y+textField.frame.size.height, textField.frame.size.width, 120);
     // save the font info to reuse in cells
@@ -48,12 +48,14 @@
     // to get rid of "extra empty cell" on the bottom
     // when there's only one cell in the table
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, textField.frame.size.width, 1)];
-    v.backgroundColor = [UIColor grayColor];
+    v.backgroundColor = [UIColor colorWithRed:241.0/255.0 green:239.0/255.0 blue:232.0/255.0 alpha:1.0];
+    [self setTableHeaderView:v];
     [self setTableFooterView:v];
     
-    UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, textField.frame.size.width, 5)];
-    v1.backgroundColor = [UIColor grayColor];
-    [self setTableHeaderView:v1];
+// 不加表头视图
+//    UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, textField.frame.size.width, 5)];
+//    v1.backgroundColor = [UIColor grayColor];
+//    [self setTableHeaderView:v1];
     self.hidden = YES;
     [parentViewController.view addSubview:self];
     
@@ -110,9 +112,10 @@
     cell.textLabel.adjustsFontSizeToFitWidth = NO;
     cell.textLabel.text = [self.suggestionOptions objectAtIndex:indexPath.row];
     
-    UIView *tempView = [[UIView alloc]init];
+    // 设定cell的背景色
+    UIView *tempView = [[UIView alloc]initWithFrame:cell.frame];
+    tempView.backgroundColor = [UIColor colorWithRed:241.0/255.0 green:239.0/255.0 blue:232.0/255.0 alpha:1.0];
     [cell setBackgroundView:tempView];
-    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }
@@ -130,6 +133,17 @@
 }
 
 #pragma mark - UITextField delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self showOptionsView];
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    // 要想在结束编辑时阻止文本字段消失，可以返回no
+    return NO;
+}
+
 - (void)textFieldValueChanged:(UITextField *)textField
 {
     self.textField = textField;
@@ -137,7 +151,7 @@
     
     if (![curString length])
     {
-        [self hideOptionsView];
+        [self showOptionsView];
         return;
     }else if ([self substringIsInDictionary:curString])
     {

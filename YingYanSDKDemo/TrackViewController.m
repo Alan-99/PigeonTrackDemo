@@ -129,7 +129,7 @@ int mark;
     
 }
 
-- (void)getPegionNameValue:(NSString *)value
+- (void)getPegionNumberValue:(NSString *)value
 {
     self.navigationItem.title = value;
     entityName = value;
