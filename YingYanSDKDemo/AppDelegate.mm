@@ -16,6 +16,8 @@
 
 #import "PegionDetailViewController.h"
 
+#import "SignUpLogInViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -70,7 +72,8 @@ NSString *const MCODE = @"sibet.Alan.TraceDemoVer0";
     
 //    ScanViewController *svc = [[ScanViewController alloc]init];
 //    self.window.rootViewController = svc;
-    
+    SignUpLogInViewController *sulivc = [[SignUpLogInViewController alloc]init];
+//    self.window.rootViewController = sulivc;
     self.window.rootViewController = _tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

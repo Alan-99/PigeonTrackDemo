@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ImageAndTextFieldView;
 
 @interface SignUpLogInViewController : UIViewController
+
+@property (nonatomic,strong) ImageAndTextFieldView *account;
+@property (nonatomic,strong) ImageAndTextFieldView *PassWord;
 
 @end
